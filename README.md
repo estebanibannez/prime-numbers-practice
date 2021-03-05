@@ -1,6 +1,6 @@
 # Ejercicio números primos.
 
-_genera listado de números primos entre 2 en base a un número dado _
+_Genera un listado de números primos entre 2 en base a un número dado ordenado de forma descendente  _
 
 ##  🚀
 
