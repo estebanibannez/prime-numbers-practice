@@ -6,19 +6,19 @@ class NumberPrime {
     //metodo de entrada del número 
     inputNumber(input) {
         // if(this.prime(input)){
-            for (let numero = 2; numero <= input; numero++) {
-                if (this.listNumbersPr(numero)) {
-                    this.numbers.push(numero)
-                }
+        for (let numero = 2; numero <= input; numero++) {
+            if (this.listNumbersPr(numero)) {
+                this.numbers.push(numero)
             }
-            const arr = this.orderNumbers(this.numbers);
-            this.printNumbers(arr, input);
+        }
+        const arr = this.orderNumbers(this.numbers);
+        this.printNumbers(arr, input);
 
-            return arr;
+        return arr;
         // }else{
         //     console.log(`${input} no es un número primo.`)
         // }
-       
+
     }
 
     //valido si los números son primos
@@ -45,25 +45,41 @@ class NumberPrime {
         arr.map((n) => {
             console.log(`> ${n}`)
         });
-        
+
     }
     //validación si número es primo o no.
     prime(n) {
         let i = 0;
         let count = 0;
         let res = false;
-        for (i=1; i <= n; i++) {
-            if(n%i==0){
+        for (i = 1; i <= n; i++) {
+            if (n % i == 0) {
                 count = count + 1;
             }
         }
-        if(count == 2){
+        if (count == 2) {
             res = true;
-        }else{
+        } else {
             res = false;
         }
 
         return res;
+    }
+
+    validations(number) {
+        if (typeof (number) != 'number' || !Number.isInteger(number)) {
+            console.log('El argumento debe ser un número entero.')
+            return false;
+            // throw TypeError('El argumento debe ser un numero');
+        }
+
+        if (number <= 1) {
+            console.log('El argumento debe ser un número entero positivo y mayor a 1')
+            return false;
+            // throw Error('El argumento debe ser un numero entero positivo');
+        } else {
+            return true;
+        }
     }
 }
 

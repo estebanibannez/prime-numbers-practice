@@ -7,20 +7,7 @@ number = parseInt(readline.question(`INGRESE UN NÚMERO : `));
 const calculateNumbers = new NumberPrime();
 
 try {
-    if (typeof(number) != 'number') {
-        console.log('El argumento debe ser un numero')
-        throw TypeError('El argumento debe ser un numero');
-    }
-    if(!Number.isInteger(number)){
-        console.log('El argumento debe ser un número entero.')
-        // throw TypeError('El argumento debe ser un número entero.');
-    }
-    if(number <= 1){
-        console.log('El argumento debe ser un número entero positivo y mayor a 1')
-        // throw Error('El argumento debe ser un numero entero positivo');
-    } 
-    else {
-        //si cumple las condiciones ejecuto el metodo de la clase.
+    if (calculateNumbers.validations(number)) {
         calculateNumbers.inputNumber(number);
     }
 } catch (error) {
