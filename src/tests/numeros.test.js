@@ -23,4 +23,17 @@ describe('Números primos', () => {
           // console.log(exp)
           expect(exp).toStrictEqual(arrayTestReverse);
      });
+
+     it('Test con string A,  Debe devolver falso', () => {
+         
+          const exp = numbersPrime.validations('A');
+          console.log(exp)
+          expect(exp).toBe(false);
+     });
+
+     it('Test con int -1,  Debe devolver falso , permite solo numeros positivos', () => {
+         
+          const exp = numbersPrime.validations(-1);
+          expect(exp).toBe(false);
+     });
 });
