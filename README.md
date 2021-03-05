@@ -6,8 +6,8 @@ _Genera un listado de números primos entre 2 en base a un número dado ordenado
 ###  🔧
 
 ```
-_npm i._
-_npm start_
-_npm run tests_
+> npm i.
+> npm start
+> npm run tests
 
 ```
