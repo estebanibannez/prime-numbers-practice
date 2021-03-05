@@ -1,6 +1,6 @@
 # Ejercicio números primos.
 
-_genera listado de números primos entre 2 en base a un 1 dado _
+_genera listado de números primos entre 2 en base a un número dado _
 
 ##  🚀
 
